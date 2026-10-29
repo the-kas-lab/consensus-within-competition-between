@@ -1,0 +1,80 @@
+{
+  "four_blue_one_red_recon": {
+    "blue_traj": "c6436f59f7fcdad5",
+    "n_steps": 61,
+    "outcome": {
+      "blue_disabled": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "blue_score": 0.0,
+      "num_escaped": 0,
+      "num_neutralized": 0,
+      "solver_failed": false,
+      "touchdown": false
+    },
+    "red_roles": "d12beae34f072616",
+    "red_traj": "7c752b00ded2741b",
+    "roles": "71914c5bf9fa7bdf"
+  },
+  "four_blue_two_red_no_recon": {
+    "blue_traj": "02af763a29897590",
+    "n_steps": 61,
+    "outcome": {
+      "blue_disabled": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "blue_score": 0.0,
+      "num_escaped": 0,
+      "num_neutralized": 0,
+      "solver_failed": false,
+      "touchdown": false
+    },
+    "red_roles": "f6e86ea61187859f",
+    "red_traj": "0dc9529ea62ac284",
+    "roles": "f1dab75a0981b1a4"
+  },
+  "four_blue_two_red_recon": {
+    "blue_traj": "712edd6427d7b7d3",
+    "n_steps": 61,
+    "outcome": {
+      "blue_disabled": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "blue_score": 0.0,
+      "num_escaped": 0,
+      "num_neutralized": 0,
+      "solver_failed": false,
+      "touchdown": false
+    },
+    "red_roles": "f6e86ea61187859f",
+    "red_traj": "86e29808730198b9",
+    "roles": "71914c5bf9fa7bdf"
+  },
+  "two_blue_one_red_recon": {
+    "blue_traj": "5c50844792300d2c",
+    "n_steps": 61,
+    "outcome": {
+      "blue_disabled": [
+        false,
+        false
+      ],
+      "blue_score": 0.0,
+      "num_escaped": 0,
+      "num_neutralized": 0,
+      "solver_failed": false,
+      "touchdown": false
+    },
+    "red_roles": "d12beae34f072616",
+    "red_traj": "0f5d8795b7ad7187",
+    "roles": "210895aa7797045b"
+  }
+}

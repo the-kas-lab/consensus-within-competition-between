@@ -1,0 +1,26 @@
+{
+ "Supplementary_Video_1": {
+  "episode_id": "commander|r4|multi_bearing|REF|s4003|repmatrix|design-v2.3mb",
+  "frames": 214,
+  "bytes": 316266,
+  "outcome": "no breach; 4 of 4 intruders destroyed",
+  "duration_s": 10.7,
+  "drawn_by": "viewer/js/scene.js"
+ },
+ "Supplementary_Video_2": {
+  "episode_id": "cbaa|r4|multi_bearing|REF|s4003|repmatrix|design-v2.3mb",
+  "frames": 179,
+  "bytes": 316179,
+  "outcome": "no breach; 4 of 4 intruders destroyed",
+  "duration_s": 8.9,
+  "drawn_by": "viewer/js/scene.js"
+ },
+ "Supplementary_Video_3": {
+  "episode_id": "independent|r4|multi_bearing|REF|s4003|repmatrix|design-v2.3mb",
+  "frames": 241,
+  "bytes": 362391,
+  "outcome": "no breach; 3 of 4 intruders destroyed",
+  "duration_s": 12.1,
+  "drawn_by": "viewer/js/scene.js"
+ }
+}

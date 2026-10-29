@@ -1,0 +1,10 @@
+numpy
+scipy
+casadi
+osqp
+matplotlib
+openai
+pydantic
+pillow
+pymupdf
+pytest

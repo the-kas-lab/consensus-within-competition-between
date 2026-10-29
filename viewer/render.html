@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Replay Render</title>
+<meta name="description" content="Headless render target of the replay viewer: draws one SI figure, still or video frame with the viewer's own scene code, for scripts/replay_media.py to print or capture.">
+<style>
+  @page { margin: 0; }
+  html, body { margin: 0; padding: 0; background: #FFFFFF; }
+  #out { display: block; line-height: 0; }
+  #out svg { display: block; }
+</style>
+</head>
+<body>
+<div id="out"></div>
+<pre id="probe-out" hidden></pre>
+<script src="js/geometry.js"></script>
+<script src="js/tokens.js"></script>
+<script src="js/fontmetrics.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/model.js"></script>
+<script src="js/render.js"></script>
+</body>
+</html>

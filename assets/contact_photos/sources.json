@@ -1,0 +1,84 @@
+{
+ "intruder_A1": {
+  "file": "intruder_A1.webp",
+  "page": "https://commons.wikimedia.org/wiki/File:UA_fiber-optic_FPV_drone_02.webp",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/UA_fiber-optic_FPV_drone_02.webp",
+  "size": [
+   1500,
+   1000
+  ],
+  "sha256": "2f7917cbfc6eb09c466ebe1c33e2e95f6d282f44d9ea0d3f1493c03c4e2a1ac8"
+ },
+ "intruder_A2": {
+  "file": "intruder_A2.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:III_MEF_Attack_Drone_Familiarization_(9435968).jpg",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/III_MEF_Attack_Drone_Familiarization_%289435968%29.jpg",
+  "size": [
+   5251,
+   3501
+  ],
+  "sha256": "eab8c3ff909d5144af474846cf50412bb1df2a6f8be59aef486940e1573354d0"
+ },
+ "intruder_S29": {
+  "file": "intruder_S29.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Drone_grenade_drop_in_GTA_(9132872).jpg",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Drone_grenade_drop_in_GTA_%289132872%29.jpg",
+  "size": [
+   5739,
+   3830
+  ],
+  "sha256": "04b0556db3240bff29f734ab172ec48561260780d3fee34ed7c1796bbc788c3e"
+ },
+ "bird_kept1": {
+  "file": "bird_kept1.jpg",
+  "page": "https://unsplash.com/photos/shallow-focus-photography-of-white-bird-flying-in-the-sky-F0CW4F8ut3U",
+  "download_url": "https://images.unsplash.com/photo-1448227922836-6d05b3f8b663",
+  "sha256": "eea5c0f82c62f09f4c1669d8a9262c1d5fe22fac0c0569332938ca44555f2a1e"
+ },
+ "bird_BA": {
+  "file": "bird_BA.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Crow_in_flight_4892833639.jpg",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Crow_in_flight_4892833639.jpg",
+  "size": [
+   4016,
+   2394
+  ],
+  "sha256": "c9e3d35f76385e1fd4bd2db455473340840e7c57a66c5899b3cdd6a7e4422fb0"
+ },
+ "bird_BB": {
+  "file": "bird_BB.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Black_Kite_in_Flight_(2405527026).jpg",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Black_Kite_in_Flight_%282405527026%29.jpg",
+  "size": [
+   2900,
+   2175
+  ],
+  "sha256": "1513dec40b7e254231f93d3efb217377807a446744e58479ae1e86fe7ac1c2a1"
+ },
+ "civilian_kept2": {
+  "file": "civilian_kept2.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Spying_quadcopter_(cropped).jpg",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Spying_quadcopter_%28cropped%29.jpg",
+  "sha256": "778ed8e2a22d597e64dc74ffedf74b662348458bbcfd17ee8aa4c5105bd43fc0"
+ },
+ "civilian_CA": {
+  "file": "civilian_CA.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Quadcopter_camera_drone_in_flight.jpg",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Quadcopter_camera_drone_in_flight.jpg",
+  "size": [
+   5472,
+   3648
+  ],
+  "sha256": "512ec63254f2fc941e96bf51e8452b61aef44ef95e64bae7aacd77850e980adc"
+ },
+ "civilian_CB": {
+  "file": "civilian_CB.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:DJI_Mavic_4_Pro_Drone_in_Flight_Napeague_New_York.jpg",
+  "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/DJI_Mavic_4_Pro_Drone_in_Flight_Napeague_New_York.jpg",
+  "size": [
+   5740,
+   3844
+  ],
+  "sha256": "874a9b323699591bbf5687e648cfc06001a92b7b199900c35cd75632f5e8d900"
+ }
+}

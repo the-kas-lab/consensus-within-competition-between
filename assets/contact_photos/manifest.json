@@ -1,0 +1,387 @@
+{
+ "size": [
+  640,
+  480
+ ],
+ "jpeg_quality": 90,
+ "resample": "LANCZOS",
+ "pillow": "12.3.0",
+ "libjpeg": "6.2",
+ "numpy": "2.4.6",
+ "scipy": "1.17.1",
+ "files": {
+  "intruder_1": {
+   "original": "intruder_A1",
+   "original_size": [
+    1500,
+    1000
+   ],
+   "crop": [
+    375,
+    40,
+    1375,
+    790
+   ],
+   "text_removed": [],
+   "sha256": "df8548be0989fb0a0802d2795cd8c6842ad657b8c82be382b15ba8f109704c84",
+   "source_page": "https://commons.wikimedia.org/wiki/File:UA_fiber-optic_FPV_drone_02.webp"
+  },
+  "intruder_2": {
+   "original": "intruder_A2",
+   "original_size": [
+    5251,
+    3501
+   ],
+   "crop": [
+    2220,
+    0,
+    4753,
+    1900
+   ],
+   "text_removed": [
+    {
+     "label": "sticker",
+     "polygon": [
+      [
+       3410,
+       1164
+      ],
+      [
+       3465,
+       1164
+      ],
+      [
+       3465,
+       1208
+      ],
+      [
+       3410,
+       1208
+      ]
+     ],
+     "rule": "all",
+     "threshold": 0,
+     "dilation": 0,
+     "pixels": 2520
+    }
+   ],
+   "sha256": "383f47a79137b3e136b04a3836a673f9bc6755c44b8a2bed78beadca48bd83bf",
+   "source_page": "https://commons.wikimedia.org/wiki/File:III_MEF_Attack_Drone_Familiarization_(9435968).jpg"
+  },
+  "intruder_3": {
+   "original": "intruder_S29",
+   "original_size": [
+    5739,
+    3830
+   ],
+   "crop": [
+    2270,
+    1048,
+    4970,
+    3073
+   ],
+   "text_removed": [
+    {
+     "label": "grenade stencil",
+     "polygon": [
+      [
+       3485,
+       2175
+      ],
+      [
+       3735,
+       2175
+      ],
+      [
+       3735,
+       2300
+      ],
+      [
+       3485,
+       2300
+      ]
+     ],
+     "rule": "yellow",
+     "threshold": 10,
+     "dilation": 5,
+     "pixels": 9458
+    }
+   ],
+   "sha256": "3b6e7feee134c526e9a93df86d669c71e8d8bf82cfe1d79e3923171d2a046ef2",
+   "source_page": "https://commons.wikimedia.org/wiki/File:Drone_grenade_drop_in_GTA_(9132872).jpg"
+  },
+  "bird_1": {
+   "original": "bird_kept1",
+   "original_size": [
+    2952,
+    2952
+   ],
+   "crop": [
+    0,
+    560,
+    2952,
+    2774
+   ],
+   "text_removed": [],
+   "sha256": "76a47f4ac0ddbeef18190e65a3cc670098c026b677bf4ffed43296ff921aa3f5",
+   "source_page": "https://unsplash.com/photos/shallow-focus-photography-of-white-bird-flying-in-the-sky-F0CW4F8ut3U"
+  },
+  "bird_2": {
+   "original": "bird_BA",
+   "original_size": [
+    4016,
+    2394
+   ],
+   "crop": [
+    769,
+    200,
+    3436,
+    2200
+   ],
+   "text_removed": [],
+   "sha256": "b369e9b28910988924c19598951da9dccef8db1932ca959c1eb8e42c854b9cd5",
+   "source_page": "https://commons.wikimedia.org/wiki/File:Crow_in_flight_4892833639.jpg"
+  },
+  "bird_3": {
+   "original": "bird_BB",
+   "original_size": [
+    2900,
+    2175
+   ],
+   "crop": [
+    0,
+    0,
+    2900,
+    2175
+   ],
+   "text_removed": [],
+   "sha256": "cc22dd857e5e0450cc7fe1f883d735a550d3ad32e56c181bf57837fea7393404",
+   "source_page": "https://commons.wikimedia.org/wiki/File:Black_Kite_in_Flight_(2405527026).jpg"
+  },
+  "civilian_1": {
+   "original": "civilian_kept2",
+   "original_size": [
+    1981,
+    1481
+   ],
+   "crop": [
+    3,
+    0,
+    1978,
+    1481
+   ],
+   "text_removed": [
+    {
+     "label": "PHANTOM emboss",
+     "polygon": [
+      [
+       912,
+       638
+      ],
+      [
+       1048,
+       638
+      ],
+      [
+       1048,
+       682
+      ],
+      [
+       912,
+       682
+      ]
+     ],
+     "rule": "all",
+     "threshold": 0,
+     "dilation": 0,
+     "pixels": 6165
+    }
+   ],
+   "sha256": "e41142d834088915e29ed040afb0b199f6fa94878d495f06ef79d1bd49adf6ff",
+   "source_page": "https://commons.wikimedia.org/wiki/File:Spying_quadcopter_(cropped).jpg"
+  },
+  "civilian_2": {
+   "original": "civilian_CA",
+   "original_size": [
+    5472,
+    3648
+   ],
+   "crop": [
+    200,
+    0,
+    5064,
+    3648
+   ],
+   "text_removed": [
+    {
+     "label": "PHANTOM",
+     "polygon": [
+      [
+       2432,
+       1922
+      ],
+      [
+       2655,
+       1928
+      ],
+      [
+       2655,
+       2003
+      ],
+      [
+       2432,
+       1995
+      ]
+     ],
+     "rule": "dark",
+     "threshold": 10,
+     "dilation": 4,
+     "pixels": 6013
+    },
+    {
+     "label": "dji on lens ring",
+     "polygon": [
+      [
+       2525,
+       2395
+      ],
+      [
+       2600,
+       2395
+      ],
+      [
+       2600,
+       2435
+      ],
+      [
+       2525,
+       2435
+      ]
+     ],
+     "rule": "bright",
+     "threshold": 10,
+     "dilation": 3,
+     "pixels": 884
+    },
+    {
+     "label": "lens markings",
+     "polygon": [
+      [
+       2478,
+       2560
+      ],
+      [
+       2520,
+       2572
+      ],
+      [
+       2560,
+       2576
+      ],
+      [
+       2600,
+       2571
+      ],
+      [
+       2625,
+       2565
+      ],
+      [
+       2630,
+       2598
+      ],
+      [
+       2610,
+       2610
+      ],
+      [
+       2560,
+       2615
+      ],
+      [
+       2510,
+       2607
+      ],
+      [
+       2474,
+       2587
+      ]
+     ],
+     "rule": "bright",
+     "threshold": 8,
+     "dilation": 3,
+     "pixels": 2125
+    }
+   ],
+   "sha256": "87c5faff853f96acf38ad40e3d780d9bd9539e3ba22953092189389a10109e9c",
+   "source_page": "https://commons.wikimedia.org/wiki/File:Quadcopter_camera_drone_in_flight.jpg"
+  },
+  "civilian_3": {
+   "original": "civilian_CB",
+   "original_size": [
+    5740,
+    3844
+   ],
+   "crop": [
+    88,
+    0,
+    5213,
+    3844
+   ],
+   "text_removed": [
+    {
+     "label": "HASSELBLAD",
+     "polygon": [
+      [
+       2568,
+       1462
+      ],
+      [
+       2785,
+       1408
+      ],
+      [
+       2797,
+       1453
+      ],
+      [
+       2570,
+       1488
+      ]
+     ],
+     "rule": "bright",
+     "threshold": 8,
+     "dilation": 6,
+     "pixels": 7532
+    },
+    {
+     "label": "MAVIC 4 PRO",
+     "polygon": [
+      [
+       3585,
+       1840
+      ],
+      [
+       3935,
+       1730
+      ],
+      [
+       3960,
+       1790
+      ],
+      [
+       3605,
+       1905
+      ]
+     ],
+     "rule": "bright",
+     "threshold": 8,
+     "dilation": 7,
+     "pixels": 23941
+    }
+   ],
+   "sha256": "cdcc357d8040b3701d05d018c84b5825253b5c554e4921ccd024e97a9129f150",
+   "source_page": "https://commons.wikimedia.org/wiki/File:DJI_Mavic_4_Pro_Drone_in_Flight_Napeague_New_York.jpg"
+  }
+ }
+}

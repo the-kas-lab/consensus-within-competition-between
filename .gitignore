@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+# the data directory (records, caches, analysis outputs) comes from the data deposit
+data/*
+!data/README.md
+.pytest_cache/

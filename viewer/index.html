@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Episode Replay</title>
+<meta name="description" content="Replay viewer for pursuit-evasion-dpc episodes: open a pev-replay bundle exported by scripts/export_replay.py. Works offline, from file://.">
+<link rel="stylesheet" href="viewer.css">
+</head>
+<body>
+<div class="app" id="app" data-mode="empty">
+
+  <header class="masthead">
+    <div class="title-block">
+      <div class="title-row"><h1 id="title">Episode replay</h1><div class="outcome" id="outcome"></div></div>
+      <div class="meta" id="meta"></div>
+    </div>
+    <nav class="tools" aria-label="Tools">
+      <button class="tool" id="btn-open" title="Open bundle(s) (o)">Open</button>
+      <button class="tool" id="btn-still" title="Save this frame as a PNG still, the exported drawing (s)" disabled>Still</button>
+      <button class="tool" id="btn-svg" title="Save this frame as SVG (vector)" disabled>SVG</button>
+      <button class="tool" id="btn-video" title="Record playback from here to the end (v)" disabled>Video</button>
+      <button class="tool icon" id="btn-theme" title="Light / dark (t)" aria-label="Toggle theme">
+        <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M8,2A6,6 0 0 1 8,14Z" fill="currentColor"/></svg>
+      </button>
+      <button class="tool icon" id="btn-help" title="Keys (?)" aria-label="Keyboard shortcuts">?</button>
+    </nav>
+  </header>
+
+  <main class="stage">
+    <section class="arenas" id="arenas" aria-label="Arena"></section>
+    <aside class="side">
+      <div class="inspector" id="inspector"></div>
+      <div class="layers" id="layers">
+        <h3 class="cap">Layers</h3>
+        <div class="chips">
+          <button class="chip" data-layer="wedges">sensor wedges</button>
+          <button class="chip" data-layer="tracks">tracks</button>
+          <button class="chip" data-layer="pursuit">pursuits</button>
+          <button class="chip" data-layer="commander">commander</button>
+          <button class="chip" data-layer="links">radio links</button>
+          <button class="chip" data-layer="orders">orders never received</button>
+          <button class="chip" data-layer="falseBeliefs">false beliefs</button>
+          <button class="chip" data-layer="labels">labels</button>
+          <button class="chip" data-layer="beliefs">beliefs</button>
+          <button class="chip" data-layer="tasks">other tasks</button>
+          <button class="chip" data-layer="sight">sight lines</button>
+          <button class="chip" data-layer="coverage">never swept</button>
+          <button class="chip" data-layer="cbf">safety filter</button>
+          <button class="chip" data-layer="photos">photographs</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="deck">
+    <div class="transport">
+      <div class="buttons">
+        <button class="tbtn" id="btn-start" title="Start (Home)" aria-label="Start"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M3,2V12M12,2L5,7L12,12Z" fill="currentColor" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></button>
+        <button class="tbtn" id="btn-back" title="Step back (←, shift = 10)" aria-label="Step back"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M10,2L4,7L10,12" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+        <button class="tbtn play" id="btn-play" title="Play / pause (space)" aria-label="Play"><svg width="16" height="16" viewBox="0 0 16 16" id="play-icon"><path d="M4,2L13,8L4,14Z" fill="currentColor"/></svg></button>
+        <button class="tbtn" id="btn-fwd" title="Step forward (→, shift = 10)" aria-label="Step forward"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M4,2L10,7L4,12" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+        <button class="tbtn" id="btn-end" title="End (End)" aria-label="End"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M11,2V12M2,2L9,7L2,12Z" fill="currentColor" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></button>
+      </div>
+      <div class="clock">
+        <span class="t" id="clock-t">0.0</span><span class="unit">s</span>
+        <span class="step" id="clock-step">step 0 / 0</span>
+      </div>
+      <div class="speeds" id="speeds" role="radiogroup" aria-label="Speed">
+        <button data-speed="0.25">¼×</button><button data-speed="0.5">½×</button><button data-speed="1">1×</button><button data-speed="2">2×</button><button data-speed="4">4×</button><button data-speed="8">8×</button>
+      </div>
+      <div class="evnav">
+        <button class="tbtn" id="btn-prev-ev" title="Previous event (shift+E)">‹</button>
+        <span class="evlabel" id="ev-label">no events</span>
+        <button class="tbtn" id="btn-next-ev" title="Next event (E)">›</button>
+      </div>
+    </div>
+    <canvas class="timeline" id="timeline"></canvas>
+  </footer>
+
+  <div class="empty" id="empty">
+    <div class="empty-card">
+      <svg class="empty-mark" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+        <rect x="6" y="6" width="52" height="52" fill="none" stroke="currentColor" stroke-width="1"/>
+        <path d="M6,6h5M16,6h5M26,6h5M36,6h5M46,6h5M6,58h5M16,58h5M26,58h5M36,58h5M46,58h5" stroke="currentColor" stroke-width="3"/>
+        <path d="M24,40A12,12 0 0 1 30,28" fill="none" stroke="var(--blue)" stroke-width="1.3" stroke-dasharray="3 2"/>
+        <circle cx="22" cy="42" r="3.5" fill="var(--blue)"/><path d="M44,19L49,28L39,28Z" fill="var(--red)"/>
+      </svg>
+      <h2>Episode replay</h2>
+      <p>Drop a <code>.replay.js</code> or <code>.replay.json</code> bundle anywhere, or <button class="link" id="btn-open-2">open one</button>. Two episodes open side by side.</p>
+      <p class="dim">Export one (free, no network):</p>
+      <pre>PYTHONPATH=$PWD python3 -m scripts.export_replay \
+  --preset exp4 --arm 2 --family symmetric --seed 3717 \
+  --out replays/sym_3717.replay.js</pre>
+      <p class="dim">or open <code>index.html?bundle=path/to/x.replay.js</code></p>
+      <p class="err" id="load-error"></p>
+    </div>
+  </div>
+
+  <div class="help" id="help" hidden>
+    <div class="help-card">
+      <h2>Keys</h2>
+      <dl>
+        <dt>space</dt><dd>play / pause</dd>
+        <dt>← →</dt><dd>one step · with shift, ten</dd>
+        <dt>Home End</dt><dd>start · end</dd>
+        <dt>[ ]</dt><dd>slower · faster</dd>
+        <dt>e · shift+e</dt><dd>next · previous event</dd>
+        <dt>1–9 · Esc</dt><dd>select defender D1–D9 · clear</dd>
+        <dt>c b r g</dt><dd>sensor wedges · beliefs · tracks · never swept</dd>
+        <dt>l n p</dt><dd>labels · radio links and orders · photographs</dd>
+        <dt>f</dt><dd>fit the chart (also double-click)</dd>
+        <dt>t</dt><dd>theme</dd>
+        <dt>s · v</dt><dd>still · video (the exported drawing)</dd>
+      </dl>
+      <p class="dim">Scroll to zoom, drag to pan, click an agent to inspect it.</p>
+    </div>
+  </div>
+
+  <div class="tip" id="tip" hidden></div>
+  <div class="rec" id="rec" hidden><span class="dot"></span> Recording, <span id="rec-t">0.0</span> s. Esc to stop.</div>
+  <input type="file" id="file" accept=".js,.json" multiple hidden>
+  <pre id="probe-out" hidden></pre>
+</div>
+
+<script src="js/geometry.js"></script>
+<script src="js/tokens.js"></script>
+<script src="js/fontmetrics.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/model.js"></script>
+<script src="js/arena.js"></script>
+<script src="js/timeline.js"></script>
+<script src="js/inspector.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

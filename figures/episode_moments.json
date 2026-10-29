@@ -1,0 +1,131 @@
+{
+ "note": "Steps (0.1 s each) at which the viewer's screenshots are taken, picked by hand after reading each episode's event timeline (pursuits, sightings, kills, losses, breach). Illustrative, not evidence.",
+ "moments": {
+  "consensus": [
+   [
+    97,
+    "First pursuits"
+   ],
+   [
+    146,
+    "One pursuer per intruder"
+   ],
+   [
+    226,
+    "First intruder destroyed"
+   ],
+   [
+    275,
+    "All four destroyed"
+   ]
+  ],
+  "independent": [
+   [
+    93,
+    "All four pursue one"
+   ],
+   [
+    163,
+    "Three pursue one"
+   ],
+   [
+    256,
+    "Three intruders destroyed"
+   ],
+   [
+    399,
+    "Time limit reached"
+   ]
+  ],
+  "limited_range": [
+   [
+    208,
+    "All four intruders seen"
+   ],
+   [
+    260,
+    "Order not received"
+   ],
+   [
+    311,
+    "Orders still not received"
+   ],
+   [
+    341,
+    "Breach"
+   ]
+  ],
+  "airspace_lowcost": [
+   [
+    171,
+    "Civilian drone pursued first"
+   ],
+   [
+    231,
+    "Two chase civilian drones"
+   ],
+   [
+    331,
+    "Chasing a civilian drone"
+   ],
+   [
+    352,
+    "Lost with the drone"
+   ]
+  ],
+  "airspace_nearfrontier": [
+   [
+    153,
+    "Civilian drones not pursued"
+   ],
+   [
+    190,
+    "One pursuer per intruder"
+   ],
+   [
+    317,
+    "Three intruders destroyed"
+   ],
+   [
+    399,
+    "Time limit reached"
+   ]
+  ],
+  "disguise_nowarning": [
+   [
+    209,
+    "Four seen, none pursued"
+   ],
+   [
+    231,
+    "Civilian drones pursued"
+   ],
+   [
+    281,
+    "One intruder pursued"
+   ],
+   [
+    323,
+    "Breach"
+   ]
+  ],
+  "disguise_warning": [
+   [
+    190,
+    "One pursuer per intruder"
+   ],
+   [
+    222,
+    "First intruder destroyed"
+   ],
+   [
+    308,
+    "Three intruders destroyed"
+   ],
+   [
+    399,
+    "Time limit reached"
+   ]
+  ]
+ }
+}

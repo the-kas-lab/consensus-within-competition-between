@@ -1,0 +1,78 @@
+{
+ "note": "The two model profiles of the reported runs. Fields that enter a request (model, provider, temperature, reasoning effort, output allowances, retry policy) must not be edited: they are part of every cached answer's address.",
+ "profiles": [
+  {
+   "profile_id": "low-cost",
+   "backend": "openrouter",
+   "model": "google/gemini-3.1-flash-lite",
+   "provider": "google-ai-studio/flex",
+   "temperature": 1.0,
+   "reasoning": "{\"effort\": \"medium\"}",
+   "max_tokens": {
+    "commander": 8000,
+    "defender": 8000,
+    "intruder": 8000
+   },
+   "price": {
+    "prompt": 1.25e-07,
+    "completion": 7.5e-07,
+    "reasoning": 7.5e-07,
+    "cache_read": 1.25e-08,
+    "cache_write": 4.16666666666667e-08
+   },
+   "price_source": "provider listing, USD per token",
+   "provenance": {
+    "context_length": "1048576",
+    "max_completion_tokens": "65536",
+    "service_tier": "flex",
+    "revision": "google/gemini-3.1-flash-lite-20260507 (endpoint name)"
+   },
+   "timeout_s": 300.0,
+   "retry": {
+    "connection": 2,
+    "empty_choices": 2,
+    "provider_abort": 2,
+    "rate_limit": 5,
+    "server_error": 2,
+    "timeout": 1
+   },
+   "serving": null
+  },
+  {
+   "profile_id": "near-frontier",
+   "backend": "openrouter",
+   "model": "openai/gpt-6.1-sol",
+   "provider": "openai",
+   "temperature": null,
+   "reasoning": "{\"effort\": \"medium\"}",
+   "max_tokens": {
+    "commander": 25000,
+    "defender": 25000,
+    "intruder": 25000
+   },
+   "price": {
+    "prompt": 2e-06,
+    "completion": 1e-05,
+    "cache_read": 1e-07,
+    "cache_write": 2.5e-06
+   },
+   "price_source": "provider listing, USD per token",
+   "provenance": {
+    "context_length": "1050000",
+    "max_completion_tokens": "128000",
+    "service_tier": "standard",
+    "revision": "openai/gpt-6.1-sol-20260929 (endpoint name)"
+   },
+   "timeout_s": 300.0,
+   "retry": {
+    "connection": 2,
+    "empty_choices": 2,
+    "provider_abort": 2,
+    "rate_limit": 5,
+    "server_error": 2,
+    "timeout": 1
+   },
+   "serving": null
+  }
+ ]
+}

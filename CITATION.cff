@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper."
+title: "Consensus Within, Competition Between: Decentralized LLM Teams for Perimeter Defense"
+type: software
+authors:
+  - given-names: Khawaja
+    family-names: Abaid Ullah
+    affiliation: Rochester Institute of Technology
+  - given-names: Ananya
+    family-names: Acharya
+    affiliation: Rochester Institute of Technology
+  - given-names: Mohammad Javad
+    family-names: Khojasteh
+    affiliation: Rochester Institute of Technology
+repository-code: "https://github.com/the-kas-lab/consensus-within-competition-between"
+license: MIT
