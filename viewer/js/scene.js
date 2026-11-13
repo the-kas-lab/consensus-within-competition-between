@@ -335,7 +335,7 @@
         if (b.age < 1 || !live(b.contact)) continue;
         const [x, y] = p(b.pred[0], b.pred[1]);
         out.push(marker(CONTACT_MARK[kindOf(ep, b.contact)][0], x, y, T.MS + 0.5, T.WHITE, kindOf(ep, b.contact) === "drone" ? T.INT : T.ZERO));
-        out.push(text(x + 4, y, `${(b.age * ep.dims.dt).toFixed(1)} s old`, { va: "center" }));
+        out.push(text(x + 4, y, `${(b.age * ep.dims.dt).toFixed(1)} sec old`, { va: "center" }));
       }
     }
 
@@ -392,7 +392,7 @@
 
     // panel frame, time, scale bar
     out.push(`<rect x="${f1(B.X)}" y="${f1(B.Y)}" width="${f1(B.W)}" height="${f1(B.H)}" fill="none" stroke="${T.ZERO}" stroke-width="${T.LW_RULE}"/>`);
-    if (L.time) out.push(text(B.X + B.W * 0.04, B.Y + B.H * 0.04, `${(k * ep.dims.dt).toFixed(1)} s`, { va: "top" }));
+    if (L.time) out.push(text(B.X + B.W * 0.04, B.Y + B.H * 0.04, `${(k * ep.dims.dt).toFixed(1)} sec`, { va: "top" }));
     if (L.scaleBar) out.push(scaleBar(ep, P, tr, B));
     return { svg: out.join(""), state: S, transform: tr };
   }
@@ -474,7 +474,7 @@
     if (L.commander && any((ep) => ep.command)) e.push(["o-cmd", "Commander"]);
     e.push(["^-int", "Intruder"]);
     if (decoys) { if (kinds.has("bird")) e.push(["v-dec", "Bird"]); if (kinds.has("civilian")) e.push(["s-dec", "Civilian drone"]); }
-    if (L.tracks) e.push(["l-track", "Last 4 s of track"]);
+    if (L.tracks) e.push(["l-track", "Last 4 sec of track"]);
     if (L.pursuit) e.push(["l-pursuit", "Pursuit"]);
     if (L.orders && any((ep) => ep.command && ep.command.orders.some((o) => o.fate === "missed_changed"))) e.push(["l-order", "Order never received"]);
     if (L.links && any((ep) => ep.network && ep.network.links && Number.isFinite(+ep.network.r_comm))) e.push(["l-link", "Radio link"]);
@@ -482,7 +482,7 @@
     e.push(["^-dead", "Intruder destroyed"]);
     if (lostDecoy) e.push(["s-dead", "Civilian drone destroyed"]);
     e.push(["x-dis", "Defender disabled"]);
-    if (L.wedges) e.push(["p-wedge", "Sensor wedge"]);
+    if (L.wedges) e.push(["p-wedge", "Sensor field of view"]);
     if (L.region) e.push(["p-region", "Defended region"]);
     return e;
   }

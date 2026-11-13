@@ -45,7 +45,7 @@ def main():
     ax.set_ylim(0, 4.0)
     ax.set_xticks([3.0, 3.25, 3.5, 3.75, 4.0])
     ax.set_xlabel("Gap between the two defenders (units)")
-    ax.set_ylabel("Closing speed (units/s)")
+    ax.set_ylabel("Closing speed (units/sec)")
     handles = [Patch(facecolor=cols[0], edgecolor="none"), Patch(facecolor=cols[1], edgecolor="none"),
                Patch(facecolor=cols[2], edgecolor="none"),
                Line2D([], [], marker="o", ms=4, color=style.TEXT, ls="none")]

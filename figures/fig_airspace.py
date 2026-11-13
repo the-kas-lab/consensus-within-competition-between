@@ -14,7 +14,7 @@ b, the photographs the models received in that episode, and the four bird-drone 
    (supplied with --bird-drone-dir; they are not part of this repository).
 c, share of the models' answers (or contact-epochs, for the commanders) that set a contact aside, by contact
    kind and team, without the disguise.
-d, intruders set aside with attack-drone photographs, with bird-drone photographs, and with bird-drone
+d, intruders dropped or deprioritized with attack-drone images, with bird-drone images, and with bird-drone
    photographs plus the forewarning sentence.
 e, defenders lost to birds and civilian drones, summed over the five episodes without the disguise.
 Five seeds: every value is shown, without CIs. Values are read from the numbers.tex macros the text prints
@@ -114,8 +114,8 @@ def tiles(fig, x0, ytop, d):
         raise SystemExit("Fig. 7b needs the four bird-drone photographs: pass --bird-drone-dir (see the README)")
     row2 = [("Bird drone", paths.BIRD_DRONE_DIR / f"bird_drone_{i}.jpg") for i in (1, 2, 3, 4)]
     tw, th, gx = 18.6, 13.95, 1.8
-    style.text_mm(fig, x0, ytop, "Photographs in the airspace challenges", ha="left", va="top", fontweight="bold")
-    style.text_mm(fig, x0, ytop - 25.0, "Photographs in the disguise", ha="left", va="top", fontweight="bold")
+    style.text_mm(fig, x0, ytop, "Images in the airspace challenges", ha="left", va="top", fontweight="bold")
+    style.text_mm(fig, x0, ytop - 25.0, "Images in the disguise", ha="left", va="top", fontweight="bold")
     for r, (row, top) in enumerate(((row1, ytop - 4.0), (row2, ytop - 29.0))):
         for k, (name, f) in enumerate(row):
             crop = photo(paths.REPO / f if r == 0 and not Path(f).is_absolute() else f, tw, th, top=(r == 1))
@@ -163,7 +163,7 @@ def main():
         kx.plot([cols[hol]], [rows[arm][1]], ls="none", clip_on=False, **mk(arm, hol))
     offs = np.linspace(-0.3, 0.3, len(TEAMS))
 
-    # c: set aside by contact kind
+    # c: dropped (commander, high authority) or deprioritized (low authority), by contact kind
     cx = style.axes_mm(fig, 13.0, y0, 62.0, hh)
     kinds = (("Red", "Intruders"), ("Bird", "Birds"), ("Civ", "Civilian\ndrones"))
     for i, (kt, _) in enumerate(kinds):
@@ -174,22 +174,22 @@ def main():
     cx.set_xlim(-0.55, 2.55)
     cx.set_ylim(-4, 104)
     cx.set_yticks([0, 50, 100])
-    cx.set_ylabel("Contacts set aside (%)")
+    cx.set_ylabel("Contacts dropped or\ndeprioritized (%)")
     style.panel_label(fig, 1.0, y0 + hh + 4.0, "c")
 
-    # d: intruders set aside, three photograph conditions
+    # d: intruders dropped or deprioritized, three image conditions
     dx = style.axes_mm(fig, 96.0, y0, 44.0, hh)
     for key, (pre, tag), arm, hol, _ in TEAMS:
         ys = [m(f"num{pre}Red"), m(f"numCamoAsideRed{tag}"), m(f"numWarnAsideRed{tag}")]
         dx.plot([0, 1, 2], ys, color=style.ARM[arm]["color"], lw=style.LW_DATA, zorder=2,
                 ls=(0, (2.0, 1.2)) if hol else "solid")
         dx.plot([0, 1, 2], ys, ls="none", zorder=3, **mk(arm, hol))
-    dx.set_xticks(range(3), ["Attack-drone\nphoto", "Bird-drone\nphoto", "Bird-drone photo\nand forewarning"])
+    dx.set_xticks(range(3), ["Attack-drone\nimage", "Bird-drone\nimage", "Bird-drone image\nand forewarning"])
     dx.tick_params(axis="x", length=0)
     dx.set_xlim(-0.3, 2.3)
     dx.set_ylim(-4, 104)
     dx.set_yticks([0, 50, 100])
-    dx.set_ylabel("Intruders set aside (%)")
+    dx.set_ylabel("Intruders dropped or\ndeprioritized (%)")
     style.panel_label(fig, 84.0, y0 + hh + 4.0, "d")
 
     # e: defenders lost to birds and civilian drones

@@ -29,9 +29,9 @@ OUT = paths.FIG / "fig_range.pdf"
 SEEDS = list(range(4001, 4031))
 TEAMS = (("commander", "Cmd", "Commander"), ("cbaa", "Cbaa", "Consensus"), ("independent", "Ind", "Independent"))
 CONDITIONS = (("D2 LI - REF", "Li", "Independent loss"), ("D3 LB - REF", "Lb", "Burst loss"),
-              ("F1 REF+attack - REF", "Atk", "Falsified reports"), ("D1 MH - REF", "Mh", "Limited range"))
+              ("F1 REF+attack - REF", "Atk", "Falsified reports"), ("D1 MH - REF", "Mh", "Limited radio range"))
 ORDER_CONDS = (("REF", False, "Ideal"), ("LI", False, "Independent loss"), ("LB", False, "Burst loss"),
-               ("REF", True, "Falsified reports"), ("MH", False, "Limited range"))
+               ("REF", True, "Falsified reports"), ("MH", False, "Limited radio range"))
 W, H = style.W2, 92.0
 
 
@@ -68,7 +68,7 @@ def task_orders():
                 agg[x["seed"]][1] += x["applied_changed"] + x["missed_changed"]
         assert all(b > 0 for _, b in agg.values()), name
         out[name] = [100 * a / b for a, b in agg.values()]
-    nums.assert_macro("numTaskOrdersArrivedMh", nums.pct(np.mean(out["Limited range"]) / 100))
+    nums.assert_macro("numTaskOrdersArrivedMh", nums.pct(np.mean(out["Limited radio range"]) / 100))
     assert min(out["Ideal"]) == 100
     return out
 

@@ -75,7 +75,7 @@ def clock(ax, y, text):
 
 # ---------------------------------------------------------------- a: one LLM call
 STATE = ("You: (92.9, 82.0), on station 0",
-         "Contact 0: (41.4, 39.1), seen 0.1 s ago",
+         "Contact 0: (41.4, 39.1), seen 0.1 sec ago",
          "Pursue contact 0: bid 1.26",
          "Hold station 0: bid 0.34",
          "Scout cell 13: bid 0.04")
@@ -146,7 +146,7 @@ def panel_a(ax, fig, top):
     # control band, right to left
     cb_top = pb_top - pb_h - 3.0
     cb_h = 29.0
-    band(ax, 3.0, cb_top - cb_h, W - 5.0, cb_h, "Sensing and control, every 0.1 s", bottom=True)
+    band(ax, 3.0, cb_top - cb_h, W - 5.0, cb_h, "Sensing and control, every 0.1 sec", bottom=True)
     cy = cb_top - cb_h / 2 + 2.0
     bh = 10.0
     # task box with the three defender tasks
@@ -189,7 +189,7 @@ TEAMS = (
      ("Preset profile, priorities", "and preferred tasks"),
      ("Own highest bid",)),
     ("intruders", "Intruders",
-     ("Own state, gates and", "shared defender sightings"),
+     ("Own state, gates and", "shared defender observations"),
      ("Attack a gate", "or evade a defender"),
      ("Own LLM",)),
 )

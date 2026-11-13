@@ -53,6 +53,25 @@ def cache_files(data: str, run) -> List[str]:
                   if os.path.basename(f) != "namespace.json")
 
 
+def has_cache(data: str) -> bool:
+    """True when every run of the deposit has its cached model answers (the cached_answers_<study> archives)."""
+    runs = [os.path.dirname(f) for f in glob.glob(os.path.join(data, "*", "*", "records.jsonl"))]
+    for d in runs:
+        with open(os.path.join(d, "records.jsonl.identity.json")) as fh:
+            ident = json.load(fh)["identity_hash"]
+        if not os.path.isdir(os.path.join(d, "cache", ident)) or not os.listdir(os.path.join(d, "cache", ident)):
+            return False
+    return bool(runs)
+
+
+def require_cache(data: str, module: str) -> None:
+    """Stop with a clear message instead of counting zero answers when the cached answers are not unpacked."""
+    if not has_cache(data):
+        raise SystemExit(f"analysis.{module} counts the cached model answers, which are not in {data}: unzip every "
+                         "cached_answers_<study>.zip of the deposit into it (data/README.md), or keep the result the "
+                         "deposit already holds in analysis/.")
+
+
 def dump(obj, path: str) -> None:
     os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
     with open(path, "w") as fh:

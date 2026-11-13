@@ -1,7 +1,20 @@
-# Data directory
+# Data deposit
 
-Put the data deposit here, or anywhere else and pass its path as `--data`. Nothing in this folder except this
-file is part of the repository.
+The data of the paper is archived on Zenodo (**DOI pending**). Download every file of the record and unzip all
+archives into one folder, for example this `data/` folder of the repository, then pass that folder as `--data`:
+
+```bash
+unzip -o records_and_analysis.zip -d data/
+for z in cached_answers_*.zip; do unzip -o -q "$z" -d data/; done
+```
+
+| File | What | Needed for |
+|---|---|---|
+| `records_and_analysis.zip` | the episode records of every run, the photo-probe calls, the analysis outputs | every number, table and figure of the paper (`python3 -m analysis.run_all --data data --figures`) |
+| `cached_answers_<study>.zip` | every model answer of the study's episodes | re-simulating episodes step by step without calling a model (`--replay`, `--replays`) |
+| `SHA256SUMS` | checksums of the archives | checking the download (`shasum -a 256 -c SHA256SUMS`) |
+
+In the code repository, nothing in `data/` except this file is tracked.
 
 Layout (`experiments/studies.py` defines it):
 

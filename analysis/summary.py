@@ -235,5 +235,6 @@ def main(data, out_dir, seeds=ALL_SEEDS):
 
 if __name__ == "__main__":
     a = common.parser(__doc__.split("\n")[0]).parse_args()
+    common.require_cache(a.data, "summary")
     o = common.out_dir(a)
     common.dump(main(a.data, o), os.path.join(o, "summary.json"))

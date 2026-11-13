@@ -32,7 +32,7 @@ OUT = paths.FIG / "fig_allocation.pdf"
 SEEDS = list(range(4001, 4031))
 TEAMS = ("commander", "cbaa", "independent")
 GROUPS = (("Ideal", ("REF",)), ("Loss or falsified\nreports", ("LI", "LB", "REF+attack")),
-          ("Limited range", ("MH",)))
+          ("Limited\nradio range", ("MH",)))
 W, H = style.W2, 66.0
 
 

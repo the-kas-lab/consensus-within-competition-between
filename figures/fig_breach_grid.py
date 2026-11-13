@@ -22,7 +22,7 @@ OUT = paths.FIG / "supp" / "fig_breach_grid.pdf"
 ARMS = ("commander", "cbaa", "independent")
 CONDS = ("REF", "LI", "LB", "REF+attack", "MH")
 CLAB = {"REF": "Ideal", "LI": "Independent\nloss", "LB": "Burst\nloss", "REF+attack": "Falsified\nreports",
-        "MH": "Limited\nrange"}
+        "MH": "Limited\nradio range"}
 SEEDS = tuple(range(4001, 4031))
 
 W, H = style.W2, 162.0

@@ -91,9 +91,7 @@ def _signed(v):
 
 
 def _ci(lo, hi):
-    if lo > 0 or hi < 0:                       # text style: no signs when the CI excludes zero
-        return f"{_signed(lo).lstrip('+')} to {_signed(hi).lstrip('+')}"
-    return f"{_signed(lo)} to {_signed(hi)}"
+    return f"{_signed(lo)} to {_signed(hi)}"   # both ends always signed, as in the text
 
 
 def _check_text(stem, reds, sign, m, lo, hi):

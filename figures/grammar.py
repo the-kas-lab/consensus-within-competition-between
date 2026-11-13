@@ -183,9 +183,7 @@ def fmt_est(v):
 
 
 def fmt_ci(lo, hi):
-    """A 95% CI as the text prints it: signs only when the interval includes zero (fractions in)."""
-    if lo > 0 or hi < 0:
-        return f"{fmt_est(lo).lstrip('+')} to {fmt_est(hi).lstrip('+')}"
+    """A 95% CI as the text prints it: both ends always signed (fractions in)."""
     return f"{fmt_est(lo)} to {fmt_est(hi)}"
 
 

@@ -73,5 +73,6 @@ def main(data, out_dir):
 
 if __name__ == "__main__":
     a = common.parser(__doc__.split("\n")[0]).parse_args()
+    common.require_cache(a.data, "behaviour_pool")
     o = common.out_dir(a)
     common.dump(main(a.data, o), os.path.join(o, "behaviour_pool.json"))
