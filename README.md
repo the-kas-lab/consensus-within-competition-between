@@ -58,7 +58,7 @@ resume, and any episode can be replayed without a model.
 ## Reproduce the paper from the data deposit
 
 The episode records, the cached model answers and the analysis outputs are not in this repository; they are in the
-data deposit on Zenodo (**DOI pending**). `data/README.md` says how to download and unpack it and describes the layout.
+data deposit on Zenodo, [10.5281/zenodo.24208099](https://doi.org/10.5281/zenodo.24208099). `data/README.md` says how to download and unpack it and describes the layout.
 The records and analysis outputs alone (`records_and_analysis.zip`) reproduce every number and figure; the cached answers
 are needed only to re-simulate episodes.
 

@@ -1,0 +1,41 @@
+{
+  "upload_type": "software",
+  "title": "Code for: Consensus Within, Competition Between: Decentralized LLM Teams for Perimeter Defense",
+  "creators": [
+    {
+      "name": "Abaid Ullah, Khawaja",
+      "affiliation": "Rochester Institute of Technology",
+      "orcid": "0009-0003-2423-7838"
+    },
+    {
+      "name": "Acharya, Ananya",
+      "affiliation": "Rochester Institute of Technology"
+    },
+    {
+      "name": "Khojasteh, Mohammad Javad",
+      "affiliation": "Rochester Institute of Technology"
+    }
+  ],
+  "description": "<p>Code for the paper \"Consensus Within, Competition Between: Decentralized LLM Teams for Perimeter Defense\" (Abaid Ullah, Acharya and Khojasteh): the simulation, the experiment runners, the analysis that recomputes every number, table and figure of the paper, and the replay viewer.</p><p>The data it reads (episode records, cached model answers, analysis outputs) is archived separately on Zenodo: <a href=\"https://doi.org/10.5281/zenodo.24208099\">https://doi.org/10.5281/zenodo.24208099</a>.</p>",
+  "license": "MIT",
+  "keywords": [
+    "LLM agents",
+    "decentralized planning",
+    "multi-agent task allocation",
+    "cyber-physical systems"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "arXiv:2610.41044",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint",
+      "scheme": "arxiv"
+    },
+    {
+      "identifier": "10.5281/zenodo.24208099",
+      "relation": "references",
+      "resource_type": "dataset",
+      "scheme": "doi"
+    }
+  ]
+}

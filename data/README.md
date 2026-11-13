@@ -1,6 +1,6 @@
 # Data deposit
 
-The data of the paper is archived on Zenodo (**DOI pending**). Download every file of the record and unzip all
+The data of the paper is archived on Zenodo: [10.5281/zenodo.24208099](https://doi.org/10.5281/zenodo.24208099). Download every file of the record and unzip all
 archives into one folder, for example this `data/` folder of the repository, then pass that folder as `--data`:
 
 ```bash
