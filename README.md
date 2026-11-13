@@ -1,5 +1,7 @@
 # Consensus Within, Competition Between: Decentralized LLM Teams for Perimeter Defense
 
+[![Code DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24209157.svg)](https://doi.org/10.5281/zenodo.24209157) [![Data DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24208099.svg)](https://doi.org/10.5281/zenodo.24208099)
+
 Code for the paper *Consensus Within, Competition Between: Decentralized LLM Teams for Perimeter Defense*
 (Khawaja Abaid Ullah, Ananya Acharya, Mohammad Javad Khojasteh; Rochester Institute of Technology).
 
@@ -127,7 +129,8 @@ photograph layer is off in every figure and GIF here; it is available when explo
 
 ## Citation
 
-Please cite the paper (see `CITATION.cff`). A DOI for this code is added to `CITATION.cff` when the release is archived.
+Please cite the paper (see `CITATION.cff`). This code is archived on Zenodo, [10.5281/zenodo.24209157](https://doi.org/10.5281/zenodo.24209157) (release v1.0.0), and the data
+it reads at [10.5281/zenodo.24208099](https://doi.org/10.5281/zenodo.24208099).
 
 ## Licence
 

@@ -14,6 +14,9 @@ authors:
     family-names: Khojasteh
     affiliation: Rochester Institute of Technology
 repository-code: "https://github.com/the-kas-lab/consensus-within-competition-between"
+doi: 10.5281/zenodo.24209157
+version: v1.0.0
+date-released: 2026-11-14
 license: MIT
 references:
   - type: data
